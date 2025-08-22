@@ -20,3 +20,11 @@ def is_present(my_list, element, cmp_function):
         if keyexit:
             return keypos
     return -1
+def add_first(array_list,element):
+    lista=al.new_list()
+    print(lista)
+    
+    lista=al.add_first(lista,element)
+    print(lista)
+
+    
