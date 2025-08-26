@@ -21,10 +21,9 @@ def is_present(my_list, element, cmp_function):
             return keypos
     return -1
 def add_first(array_list,element):
-    lista=al.new_list()
-    print(lista)
-    
-    lista=al.add_first(lista,element)
-    print(lista)
+    array_list["elements"].insert(0,element)
+    array_list["size"]+=1
+    return array_list
 
-    
+def size(array_list):
+    return array_list["size"]    
