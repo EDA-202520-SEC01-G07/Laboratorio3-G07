@@ -25,5 +25,16 @@ def add_first(array_list,element):
     array_list["size"]+=1
     return array_list
 
+def add_last(array_list,element):
+    array_list["elements"].append(element)
+    array_list["size"]+=1
+    return array_list
+
 def size(array_list):
-    return array_list["size"]    
+    return array_list["size"]   
+
+def first_element(array_list):
+    if array_list["size"]>0:
+        return array_list["elements"][0]
+    return None
+
