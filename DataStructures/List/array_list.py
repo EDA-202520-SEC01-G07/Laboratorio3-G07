@@ -38,3 +38,61 @@ def first_element(array_list):
         return array_list["elements"][0]
     return None
 
+def is_empty(array_list):
+    return array_list["size"]==0
+
+def last_element(array_list):
+    if array_list["size"]>0:
+        return array_list["elements"][array_list["size"]-1]
+    return None
+
+def delete_element(array_list,index):
+    if array_list["size"]>0 and index<array_list["size"]:
+        element=array_list["elements"].pop(index)
+        array_list["size"]-=1
+        return element
+    return None
+
+def remove_first(array_list):
+    if array_list["size"]>0:
+        element=array_list["elements"].pop(0)
+        array_list["size"]-=1
+        return element
+    return None
+
+def remove_last(array_list):
+    if array_list["size"]>0:
+        element=array_list["elements"].pop(array_list["size"]-1)
+        array_list["size"]-=1
+        return element
+    return None
+
+def insert_element(array_list,index,element):
+    if index<=array_list["size"]:
+        array_list["elements"].insert(index,element)
+        array_list["size"]+=1
+        return True
+    return False
+
+def change_info(array_list,index,element):
+    if array_list["size"]>0 and index<array_list["size"]:
+        array_list["elements"][index]=element
+        return True
+    return False
+
+def exchange(array_list,index1,index2):
+    if array_list["size"]>0 and index1<array_list["size"] and index2<array_list["size"]:
+        temp=array_list["elements"][index1]
+        array_list["elements"][index1]=array_list["elements"][index2]
+        array_list["elements"][index2]=temp
+        return True
+    return False
+
+def sub_list(array_list, start_index, end_index):
+    if array_list["size"]>0 and start_index<array_list["size"] and end_index<array_list["size"] and start_index<=end_index:
+        newlist=new_list()
+        for i in range(start_index,end_index+1):
+            add_last(newlist,array_list["elements"][i])
+        return newlist
+    return None
+
