@@ -47,11 +47,9 @@ def last_element(array_list):
     return None
 
 def delete_element(array_list,index):
-    if array_list["size"]>0 and index<array_list["size"]:
-        element=array_list["elements"].pop(index)
-        array_list["size"]-=1
-        return element
-    return None
+    del array_list["elements"][index]
+    array_list["size"]-=1
+    return array_list
 
 def remove_first(array_list):
     if array_list["size"]>0:
@@ -68,11 +66,9 @@ def remove_last(array_list):
     return None
 
 def insert_element(array_list,index,element):
-    if index<=array_list["size"]:
-        array_list["elements"].insert(index,element)
-        array_list["size"]+=1
-        return True
-    return False
+    array_list["elements"].insert(index,element)
+    array_list["size"]+=1
+    return array_list
 
 def change_info(array_list,index,element):
     if array_list["size"]>0 and index<array_list["size"]:
