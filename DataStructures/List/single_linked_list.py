@@ -35,13 +35,13 @@ def is_present(my_list, element, cmp_function):
     """
 def new_node():
     nodo={
-        "info"=None
-        "next"=None
+        "info":None,
+        "next":None
     }
     return nodo
     
 def add_first(list, element):
-    nodo = new_node
+    nodo = new_node()
     nodo["info"]=element
     
     if list["size"]==0:
@@ -51,7 +51,6 @@ def add_first(list, element):
         primero = list["first"]
         nodo["next"]=primero
         list["first"]=nodo
-    
     list["size"]+=1
     return list
 
