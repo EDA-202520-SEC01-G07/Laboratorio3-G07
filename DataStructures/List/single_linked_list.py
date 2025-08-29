@@ -146,6 +146,9 @@ def insert_element(my_list, element, pos):
     nuevo = new_node()
     if pos < 0 or pos > size(my_list):
         raise Exception('IndexError: list index out of range')
+    elif pos == 0:
+            nodo["next"]=my_list["first"]
+            my_list["first"]=nodo
     else:
         nodo = my_list["first"]
         ant = None
@@ -153,7 +156,7 @@ def insert_element(my_list, element, pos):
         while cont < pos:
             ant = nodo
             nodo = nodo["next"]
-            cont +=1
+            cont +=1    
         nuevo["next"]=nodo
         ant["next"]=nuevo
         nuevo["info"]=element
