@@ -147,8 +147,8 @@ def insert_element(my_list, element, pos):
     if pos < 0 or pos > size(my_list):
         raise Exception('IndexError: list index out of range')
     elif pos == 0:
-            nodo["next"]=my_list["first"]
-            my_list["first"]=nodo
+            nuevo["next"]=my_list["first"]
+            my_list["first"]=nuevo
     else:
         nodo = my_list["first"]
         ant = None
